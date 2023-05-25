@@ -9,9 +9,16 @@ import "@itgold/everscale-tip/contracts/TIP4_3/TIP4_3Nft.sol";
 
 contract NameNft is TIP4_1Nft, TIP4_2Nft, TIP4_3Nft {
 
+    // address _root;
+
+    // function getRoot() view virtual override responsible {
+    //     return { value: uint128, bounce: bool, flag: uint8 } _root;
+    // }
+
     // just call constructors of all implemented classes
     constructor(
         address owner,
+        // address root,
         address sendGasTo,
         uint128 remainOnNft,
         string json, // for TIP-4.2

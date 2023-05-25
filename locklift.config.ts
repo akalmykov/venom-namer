@@ -7,7 +7,7 @@ declare global {
 }
 
 const LOCAL_NETWORK_ENDPOINT = process.env.NETWORK_ENDPOINT || "http://localhost/graphql";
-const DEV_NET_NETWORK_ENDPOINT = process.env.DEV_NET_NETWORK_ENDPOINT || "https://devnet-sandbox.evercloud.dev/graphql";
+const DEV_NET_NETWORK_ENDPOINT = "https://devnet-sandbox.evercloud.dev/graphql";
 
 const VENOM_TESTNET_ENDPOINT = "https://jrpc-testnet.venom.foundation";
 const VENOM_TESTNET_TRACE_ENDPOINT = "https://gql-testnet.venom.foundation/graphql";
@@ -139,11 +139,11 @@ const config: LockliftConfig = {
     },
     venom_testnet: {
       connection: {
-        id: 1000,
+        id: 1,
         type: "jrpc",
         group: "dev",
         data: {
-          endpoint: VENOM_TESTNET_ENDPOINT,
+          endpoint: "https://jrpc-devnet.venom.foundation/rpc",
         },
       },
       giver: {
